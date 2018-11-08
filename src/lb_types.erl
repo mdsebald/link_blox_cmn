@@ -7,6 +7,7 @@
 -author("Mark Sebald").
 
 -export_type([
+                i2c_device/0,
                 block_defn/0,
                 block_state/0,
                 attribs/0,
@@ -57,6 +58,10 @@
                 block_status/0,
                 type_group/0
 ]).
+
+% I2C Device, specify reference to device bus and device address
+-type i2c_device() :: {I2cRef :: reference(), I2cAddr :: non_neg_integer()}.
+
 
 % Block definition.  Used for creating or saving a block 
 
